@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="coffee_beige">#FFF3E0</color>
+    <color name="coffee_cappuccino">#F5E6D3</color>
+    <color name="coffee_beans">#F5F5F5</color>
+    <color name="coffee_text_primary">#3E2723</color>
+    <color name="coffee_text_secondary">#5D4037</color>
+    <color name="coffee_text_hint">#8D6E63</color>
 </resources>

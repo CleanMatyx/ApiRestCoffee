@@ -4,28 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_primary90"
+    android:background="@color/coffee_cappuccino"
     tools:context=".ui.main.MainActivity"
     tools:menu="@menu/options_menu">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:liftOnScroll="true">
+        android:background="@color/coffee_cappuccino"
+        app:elevation="4dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/mToolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutMediumSize"
-            android:background="@color/material_dynamic_primary40"
-            app:layout_scrollEffect="compress"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/coffee_text_secondary"
             app:layout_scrollFlags="scroll|enterAlways|snap"
             app:menu="@menu/options_menu"
-            app:subtitleCentered="false"
-            app:subtitleTextColor="?attr/colorOnPrimary"
             app:title="@string/app_name"
-            app:titleCentered="false"
-            app:titleTextColor="?attr/colorOnPrimary" />
+            app:titleCentered="true"
+            app:titleTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -39,6 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
+            android:paddingTop="16dp"
+            android:paddingHorizontal="8dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/coffee_item" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

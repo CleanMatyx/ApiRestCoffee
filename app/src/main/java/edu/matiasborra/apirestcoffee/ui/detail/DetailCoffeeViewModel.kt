@@ -12,6 +12,12 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
+/**
+ * ViewModel para manejar la lógica de la pantalla de detalles del café.
+ * @param repository Repositorio para acceder a los datos.
+ * @param idCoffee ID del café.
+ * @author Matias Borra
+ */
 class DetailCoffeeViewModel(
     private val repository: Repository,
     private val idCoffee: Int = -1
@@ -35,17 +41,33 @@ class DetailCoffeeViewModel(
         }
     }
 
-    // En DetailCoffeeViewModel.kt
+    /**
+     * Añade un comentario a un café.
+     * @param token Token de autenticación.
+     * @param comment Comentario a añadir.
+     * @author Matias Borra
+     */
     suspend fun addComment(token: String, comment: CommentItem) {
         repository.addCoffeeComment(token, comment)
     }
 
+    /**
+     * Refresca los comentarios de un café.
+     * @param token Token de autenticación.
+     * @author Matias Borra
+     */
     suspend fun refreshComments(token: String) {
         val commentsResult = repository.fetchCoffeesCommentsById(token, idCoffee).first()
         comments.value = commentsResult
     }
 }
 
+/**
+ * Factory para crear instancias de DetailCoffeeViewModel.
+ * @param repository Repositorio para acceder a los datos.
+ * @param idCoffee ID del café.
+ * @author Matias Borra
+ */
 @Suppress("UNCHECKED_CAST")
 class DetailCoffeeViewModelFactory(
     private val repository: Repository,

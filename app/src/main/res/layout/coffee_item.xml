@@ -4,34 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/border_item">
+    android:background="@color/coffee_cappuccino">
 
-  <TextView
-      android:id="@+id/tvCoffeeName"
-      android:layout_width="wrap_content"
+  <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:padding="8dp"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:text="@tools:sample/full_names" />
-
-  <TextView
-      android:id="@+id/tvComments"
-      android:layout_width="45dp"
-      android:layout_height="45dp"
-      android:layout_marginTop="8dp"
-      android:layout_marginEnd="8dp"
-      android:autoSizeMaxTextSize="40sp"
-      android:autoSizeMinTextSize="10sp"
-      android:autoSizeStepGranularity="2sp"
-      android:background="@drawable/border"
-      android:gravity="center_horizontal|center_vertical"
-      android:padding="8dp"
+      android:layout_marginHorizontal="8dp"
+      android:layout_marginVertical="4dp"
+      app:cardCornerRadius="12dp"
+      app:cardElevation="4dp"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:ignore="TextSizeCheck"
-      tools:text="@tools:sample/date/hhmm" />
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/coffee_beans"
+        android:padding="16dp">
+
+      <TextView
+          android:id="@+id/tvCoffeeName"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="4dp"
+          android:layout_marginTop="4dp"
+          android:textColor="@color/coffee_text_primary"
+          android:textSize="24sp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintWidth_max="wrap"
+          tools:text="@tools:sample/full_names" />
+
+      <TextView
+          android:id="@+id/tvComments"
+          android:layout_width="45dp"
+          android:layout_height="45dp"
+          android:background="@drawable/rounded_comments_background"
+          android:gravity="center"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

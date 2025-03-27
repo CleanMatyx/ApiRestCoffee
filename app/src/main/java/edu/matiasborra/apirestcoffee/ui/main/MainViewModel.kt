@@ -11,15 +11,37 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
+/**
+ * ViewModel para manejar la lógica de la pantalla principal.
+ * @param repository Repositorio para acceder a los datos.
+ * @author Matias Borra
+ */
 class MainViewModel(private val repository: Repository): ViewModel() {
     private val _loginState = MutableStateFlow<LoginState>(LoginState.Idle)
     val loginState: Flow<LoginState>
         get() = _loginState
 
+    /**
+     * Obtiene la lista de cafés.
+     * @param token Token de autenticación.
+     * @author Matias Borra
+     */
     fun fetchCoffees(token: String) = repository.fetchCoffees(token)
 
+    /**
+     * Obtiene un café por su ID.
+     * @param token Token de autenticación.
+     * @param id ID del café.
+     * @author Matias Borra
+     */
     fun fetchCoffeesById(token: String, id: Int) = repository.fetchCoffeesById(token, id)
 
+    /**
+     * Inicia sesión con el nombre de usuario y contraseña proporcionados.
+     * @param username Nombre de usuario.
+     * @param password Contraseña.
+     * @author Matias Borra
+     */
     fun login(username: String, password: String) {
         viewModelScope.launch {
             _loginState.value = LoginState.Loading
@@ -36,16 +58,30 @@ class MainViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
+    /**
+     * Cierra la sesión actual.
+     * @author Matias Borra
+     */
     fun logout() {
-        viewModelScope.launch() {
+        viewModelScope.launch {
             repository.logout()
             _loginState.value = LoginState.Idle
         }
     }
 
+    /**
+     * Obtiene el flujo de la sesión actual.
+     * @return Flujo de la sesión.
+     * @author Matias Borra
+     */
     fun getSessionFlow() = repository.getSessionFlow()
 }
 
+/**
+ * Factory para crear instancias de MainViewModel.
+ * @param repository Repositorio para acceder a los datos.
+ * @author Matias Borra
+ */
 @Suppress("UNCHECKED_CAST")
 class MainViewModelFactory(private val repository: Repository) :
     ViewModelProvider.Factory {

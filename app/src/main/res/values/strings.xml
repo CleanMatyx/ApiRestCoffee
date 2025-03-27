@@ -17,10 +17,15 @@
     <string name="txt_error_coffe">Error al cargar cafés</string>
     <string name="txt_coffee_description">Descripción del café</string>
     <string name="txt_comments_detail">Comentarios:</string>
-    <string name="txt_comment_text_area">Escribir comentario</string>
+    <string name="txt_hint_comment">Escribir comentario</string>
     <string name="txt_send_comment_button">Enviar</string>
     <string name="txt_session_expired">La sesión ha expirado…</string>
     <string name="txt_message_unauthorized">Token inválido</string>
     <string name="txt_comment">Comentario</string>
     <string name="txt_empty_field">El comentario no puede estar vacío</string>
+    <string name="txt_about_us">Sobre Mi</string>
+    <string name="txt_about_message">Matías E. Borra Quiroz \n2º DAM-DAW \nPromoción 2024/2025</string>
+    <string name="txt_send_review">Enviar Comentario</string>
+    <string name="txt_error_send_review">No se pudo enviar el comentario</string>
+    <string name="txt_error_401">Sesión expirada. Por favor inicia sesión nuevamente.</string>
 </resources>

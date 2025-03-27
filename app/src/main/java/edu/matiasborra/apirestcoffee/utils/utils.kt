@@ -5,8 +5,12 @@ import android.content.Context.CONNECTIVITY_SERVICE
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 
-//Función para comprobar la conexión a internet
-//Devuelve true si hay conexión y false si no hay conexión
+/**
+ * Compueba si hay conexión a internet en el dispositivo
+ * @param context Contexto de la aplicación
+ * @return true si hay conexión, false si no
+ * @author Matias Borra
+ */
 fun checkConnection(context: Context): Boolean {
     val cm = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
     val networkInfo = cm.activeNetwork
