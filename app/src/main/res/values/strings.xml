@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ApiRestCoffee</string>
+    <string name="no_comments">0</string>
+    <string name="txt_no_info">No se ha podido cargar datos…</string>
+    <string name="default_coffee">Café</string>
+    <string name="txt_coffee_name">Nombre del Café</string>
+    <string name="txt_error_auth">Fallo al autenticar, usuario o contraseña</string>
+    <string name="warning_username">El nombre de usuario no puede estar vacío</string>
+    <string name="login_title">Inicio de Sesión</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña del usuario</string>
+    <string name="todo">TODO</string>
+    <string name="coffee_image_desc">txt_description</string>
+    <string name="txt_login_menu">login/logout</string>
+    <string name="txt_cancel_login">Hasta otra!</string>
+    <string name="txt_no_session">No hay sesión activa</string>
+    <string name="txt_error_coffe">Error al cargar cafés</string>
+    <string name="txt_coffee_description">Descripción del café</string>
+    <string name="txt_comments_detail">Comentarios:</string>
+    <string name="txt_comment_text_area">Escribir comentario</string>
+    <string name="txt_send_comment_button">Enviar</string>
+    <string name="txt_session_expired">La sesión ha expirado…</string>
+    <string name="txt_message_unauthorized">Token inválido</string>
+    <string name="txt_comment">Comentario</string>
+    <string name="txt_empty_field">El comentario no puede estar vacío</string>
+</resources>
